@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="hover-grow-shrink m-5 text-dark bg-light rounded" 
+ style="max-width:600px;transition: transform 0.3s ease;"
+ onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+  <!-- Introduction Section -->
+  <div class="container mt-5 px-5 text-center">
+    <h3 class="mb-3">Welcome to the AI Blog Generator</h3>
+      
+    <p style="color:rgb(83, 82, 82)">
+      Generate high-quality blog articles from YouTube videos using artificial intelligence.
+      Simply enter the link to the YouTube video below and let the AI create the content for you!
+    </p>
+  </div>
+
+  <!-- YouTube Section -->
+  <div class="m-3">
+    <h4 >Enter Youtube Video Link</h4>
+    <div class="d-flex">
+      <input type="url" id="youtubeLink" placeholder="Paste YouTube Link.." class="flex-grow-1 p-2 me-2 border form-control border-primary rounded">
+      <button class="btn btn-primary px-4" id="generateBlogButton" type="button">Generate</button>
+    </div>
+  </div>
+
+  <!-- section for loading circle -->
+  <div style="display: none;" id="loading-circle" class="load"></div>
+
+
+  <!-- Generated Blog Display Section -->
+  <section class="m-3 flex-grow">
+    <h4 class="mb-3">Generated Blog Article</h4>
+    <div id="blogContent" class="space-y-4">
+          
+    </div>
+  </section>
+
+
+    
+</div>
+{% endblock content %}
