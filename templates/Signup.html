@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container m-3 p-3 m-sm-5 bg-white rounded" style="max-width: 500px;">
-    <form action="" class="m-3">
+    <form action="" class="m-3" method="POST">
         {% csrf_token %}
         {% if error_message %}
             <div class="text-danger text-center">
@@ -10,14 +10,14 @@
             </div>
         {% endif %}
         <h3 class="mb-3 text-primary">Signup</h3>
-        <label for="" class="fw-semibold">Username</label>
-        <input type="text" class="form-control border-primary" placeholder="Please Enter Your Name...">
-        <label for="" class="mt-2 fw-semibold">Email</label>
-        <input type="email" class="form-control border-primary" placeholder="Please Enter Your Email...">
-        <label for="" class="mt-2 fw-semibold">Password</label>
-        <input type="password" class="form-control border-primary" placeholder="Please Enter Your Password...">
-        <label for="" class="mt-2 fw-semibold">Repeat Password</label>
-        <input type="password" class="form-control border-primary" placeholder="Please Enter Your Password Again...">
+        <label for="username" class="fw-semibold">Username</label>
+        <input type="text" id="username" name="username" class="form-control border-primary" placeholder="Please Enter Your Name...">
+        <label for="email" class="mt-2 fw-semibold">Email</label>
+        <input type="email" id="email" name="email" class="form-control border-primary" placeholder="Please Enter Your Email...">
+        <label for="password" class="mt-2 fw-semibold">Password</label>
+        <input type="password" id="password" name="password" class="form-control border-primary" placeholder="Please Enter Your Password...">
+        <label for="repeatPassword" class="mt-2 fw-semibold">Repeat Password</label>
+        <input type="password" id="repeatPassword" name="repeatPassword" class="form-control border-primary" placeholder="Please Enter Your Password Again...">
         <button class="btn btn-primary col-12 mt-4">Signup</button>
     </form>
 </div>
