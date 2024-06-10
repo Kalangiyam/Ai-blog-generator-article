@@ -71,7 +71,7 @@
             
             blogContent.innerHTML = ''; // Clear previous content
 
-            const endpointUrl = '/generate-blog';
+            const endpointUrl = '/generate-blog';            
             
             try {
                 const response = await fetch(endpointUrl, {
@@ -88,7 +88,7 @@
 
             } catch (error) {
                 console.error("Error occurred:", error);
-                alert("Something went wrong. Please try again later.");
+                alert("Something went wrong. Please try again later.");               
                 
             }
             document.getElementById('loading-circle').style.display = 'none';
@@ -96,6 +96,6 @@
             alert("Please enter a YouTube link.");
         }
     });
-</script>
+</script> 
 </body>
 </html>
