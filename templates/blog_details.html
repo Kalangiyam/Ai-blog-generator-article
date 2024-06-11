@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="m-3 m-sm-5 bg-primary container rounded" style="max-width: 900px;">
+    <h3 class="ml-3 mt-3 text-white">Blog Details</h3>    
+    
+        <div class="bg-success-subtle my-3 p-3 rounded border">
+            <h4>{{blog_article_details.yt_video_title}}</h4>
+            <!-- <p class="fw-semibold">{{blog_article_details.yt_video_title}}</p> -->
+            <h6>Created_At:{{blog_article_details.created_at}}</h6>
+            <hr>
+            <h5>YouTube Transcript:</h5>
+            <p>{{blog_article_details.yt_video_transcript}}</p>
+            <hr>
+            <h5>YouTube Link:</h5> 
+            <a href="{{blog_article_details.yt_video_link}}">{{blog_article_details.yt_video_link}}</a>
+        </div>
+    
+</div>
+{% endblock content %}

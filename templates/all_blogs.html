@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="m-3 m-sm-5 bg-white container rounded" style="max-width: 800px;">
+<div class="m-3 m-sm-5 bg-white container rounded" style="max-width: 900px;">
     <h3 class="ml-3 mt-3">All Blogs</h3>    
-    {% for article in blog_articles %}
+    {% for article in blog_articles reversed %}
         <div class="bg-success-subtle my-3 p-3 rounded">
-            <a class="fw-semibold" href="#">{{article.yt_video_title}}</a>
-            <p>{{article.yt_video_transcript|truncatechars:80}}</p>
+            <a class="fw-semibold" href="{% url 'blog-details' article.id %}">{{article.yt_video_title}}</a>
+            <p>{{article.yt_video_transcript|truncatechars:80}}</p>            
         </div>
     {% endfor %}  
 </div>
