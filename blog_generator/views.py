@@ -94,6 +94,9 @@ def get_transcription(link):
 #     generated_content = response.choices[0].text.strip()
 #     return generated_content '''
 
+def blog_list(request):
+    blog_articles = BlogPost.objects.filter(user=request.user)
+    return render(request,"all_blogs.html",{'blog_articles':blog_articles})
 
 def user_login(request):
     if request.method == 'POST':
